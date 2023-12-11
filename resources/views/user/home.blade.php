@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Usuario</title>
+    <title>Usuarios</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
             <x-header />
         </header>
 
-        <nav class="navbar navbar-light bg-light">
+        {{-- <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
               <a class="navbar-brand" href={{route('user_register')}}>Cadastrar Ususario</a>
               <form action={{route('user_find_by_name')}} class="d-flex">
@@ -25,7 +25,7 @@
                 <button class="btn btn-outline-success" type="submit">Buscar</button>
               </form>
             </div>
-          </nav>
+          </nav> --}}
 
 
         <h1 class="h1 d-flex justify-content-center">Usuarios</h1>

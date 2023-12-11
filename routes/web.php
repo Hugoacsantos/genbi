@@ -20,5 +20,12 @@ Route::get('/', function () {
 
 
 Route::prefix('user', function(){
-    Route::get('/',[UserController::class,'index']);
+    Route::get('/',[UserController::class,'index'])->name('user_home');
+    Route::get('/cadastro',[UserController::class,'cadastro'])->name('user_cadastro');
+    Route::get('/search',[UserController::class,'search'])->name('user_search');
+    Route::get('/details/{id}',[UserController::class,'details'])->name('user_details');
+    Route::get('/edit/{id}',[UserController::class,'edit']);
+    Route::get('/{id}',[UserController::class,'find']);
+    Route::post('/create',[UserController::class,'create'])->name('user_create');
+    Route::delete('/{id}',[UserController::class,'delete'])->name('user_delete');
 });
