@@ -36,7 +36,7 @@ Route::prefix('user')->group(function(){
 
 Route::prefix('book')->group(function(){
     Route::get('/',[BookController::class,'index'])->name('book_home');
-    Route::get('/cadastro',[BookController::class,'register'])->name('book_cadastro');
+    Route::get('/cadastro',[BookController::class,'register'])->name('book_register');
     Route::get('/search',[BookController::class,'search'])->name('book_search');
     Route::get('/details/{id}',[BookController::class,'details'])->name('book_details');
     Route::get('/edit/{id}',[BookController::class,'edit']);
@@ -47,7 +47,7 @@ Route::prefix('book')->group(function(){
 
 Route::prefix('order')->group(function(){
     Route::get('/',[OrderController::class,'index'])->name('order_home');
-    Route::get('/cadastro',[OrderController ::class,'register'])->name('order_cadastro');
+    Route::get('/cadastro',[OrderController ::class,'register'])->name('order_register');
     Route::get('/search',[OrderController::class,'search'])->name('order_search');
     Route::get('/details/{id}',[OrderController::class,'details'])->name('order_details');
     Route::get('/edit/{id}',[OrderController::class,'edit']);
@@ -58,8 +58,8 @@ Route::prefix('order')->group(function(){
 
 Route::prefix('author')->group(function(){
     Route::get('/',[AuthorController::class,'index'])->name('author_home');
-    Route::get('/cadastro',[AuthorController::class,'register'])->name('author_cadastro');
-    Route::get('/search',[AuthorController::class,'search'])->name('author_search');
+    Route::get('/cadastro',[AuthorController::class,'register'])->name('author_register');
+    Route::get('/search',[AuthorController::class,'search'])->name('book_find_by_title');
     Route::get('/details/{id}',[AuthorController::class,'details'])->name('author_details');
     Route::get('/edit/{id}',[AuthorController::class,'edit']);
     Route::get('/{id}',[AuthorController::class,'find']);
