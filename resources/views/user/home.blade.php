@@ -13,9 +13,9 @@
 <body>
 
     <div class="container d-flex flex-column">
-        <header class="bg-dark bg-gradient">
+        {{-- <header class="bg-dark bg-gradient">
             <x-header />
-        </header>
+        </header> --}}
 
         {{-- <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">

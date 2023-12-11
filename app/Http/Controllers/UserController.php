@@ -12,7 +12,7 @@ class UserController extends Controller
     public function index(){
         $users = User::all();
 
-        return view('author.home',['users'=>$users]);
+        return view('user.home',['users'=>$users]);
     }
 
     public function cadastro(){

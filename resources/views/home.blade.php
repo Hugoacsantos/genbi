@@ -12,13 +12,13 @@
 
 <body>
     <div class="container d-flex flex-column">
-        <header class="bg-dark bg-gradient">
+        {{-- <header class="bg-dark bg-gradient">
             <x-header />
-        </header>
+        </header> --}}
 
 
         <h1 class="pt-5 pb-5 text-center">Ultimas atualizações</h1>
-        <table class="table table-dark table-striped w-50 m-auto text-center ">
+        {{-- <table class="table table-dark table-striped w-50 m-auto text-center ">
             <thead>
                 <tr>
                     <th scope="col">Nome</th>
@@ -37,7 +37,7 @@
                 </tr>
                 @endforeach
             </tbody>
-        </table>
+        </table> --}}
 
     </div>
 
