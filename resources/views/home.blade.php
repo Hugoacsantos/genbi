@@ -16,7 +16,6 @@
             <x-header />
         </header>
 
-        {{-- <a href="">Cadastrar novo emprestimo</a> --}}
 
         <h1 class="pt-5 pb-5 text-center">Ultimas atualizações</h1>
         <table class="table table-dark table-striped w-50 m-auto text-center ">
