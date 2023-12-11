@@ -12,9 +12,9 @@
 
 <body>
     <div class="container d-flex flex-column">
-        {{-- <header class="bg-dark bg-gradient">
+        <header class="bg-dark bg-gradient">
             <x-header />
-        </header> --}}
+        </header>
 
 
         <h1 class="pt-5 pb-5 text-center">Ultimas atualizações</h1>
