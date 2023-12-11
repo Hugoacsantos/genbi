@@ -24,7 +24,7 @@ Route::get('/', function () {
 
 Route::prefix('user')->group(function(){
     Route::get('/',[UserController::class,'index'])->name('user_home');
-    Route::get('/cadastro',[UserController::class,'cadastro'])->name('user_cadastro');
+    Route::get('/cadastro',[UserController::class,'register'])->name('user_register');
     Route::get('/search',[UserController::class,'search'])->name('user_search');
     Route::get('/details/{id}',[UserController::class,'details'])->name('user_details');
     Route::get('/edit/{id}',[UserController::class,'edit']);
@@ -36,7 +36,7 @@ Route::prefix('user')->group(function(){
 
 Route::prefix('book')->group(function(){
     Route::get('/',[BookController::class,'index'])->name('book_home');
-    Route::get('/cadastro',[BookController::class,'cadastro'])->name('book_cadastro');
+    Route::get('/cadastro',[BookController::class,'register'])->name('book_cadastro');
     Route::get('/search',[BookController::class,'search'])->name('book_search');
     Route::get('/details/{id}',[BookController::class,'details'])->name('book_details');
     Route::get('/edit/{id}',[BookController::class,'edit']);
@@ -47,7 +47,7 @@ Route::prefix('book')->group(function(){
 
 Route::prefix('order')->group(function(){
     Route::get('/',[OrderController::class,'index'])->name('order_home');
-    Route::get('/cadastro',[OrderController ::class,'cadastro'])->name('order_cadastro');
+    Route::get('/cadastro',[OrderController ::class,'register'])->name('order_cadastro');
     Route::get('/search',[OrderController::class,'search'])->name('order_search');
     Route::get('/details/{id}',[OrderController::class,'details'])->name('order_details');
     Route::get('/edit/{id}',[OrderController::class,'edit']);
@@ -58,7 +58,7 @@ Route::prefix('order')->group(function(){
 
 Route::prefix('author')->group(function(){
     Route::get('/',[AuthorController::class,'index'])->name('author_home');
-    Route::get('/cadastro',[AuthorController::class,'cadastro'])->name('author_cadastro');
+    Route::get('/cadastro',[AuthorController::class,'register'])->name('author_cadastro');
     Route::get('/search',[AuthorController::class,'search'])->name('author_search');
     Route::get('/details/{id}',[AuthorController::class,'details'])->name('author_details');
     Route::get('/edit/{id}',[AuthorController::class,'edit']);

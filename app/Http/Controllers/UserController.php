@@ -15,7 +15,7 @@ class UserController extends Controller
         return view('user.home',['users'=>$users]);
     }
 
-    public function cadastro(){
+    public function register(){
         return view('user.cadastro');
     }
 

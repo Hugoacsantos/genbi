@@ -14,7 +14,7 @@ class BookController extends Controller
         return view('book.home',['books'=>$books]);
     }
 
-    public function cadastro(){
+    public function register(){
         return view('book.cadastro');
     }
 

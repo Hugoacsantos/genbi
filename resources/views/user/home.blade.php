@@ -13,19 +13,19 @@
 <body>
 
     <div class="container d-flex flex-column">
-        {{-- <header class="bg-dark bg-gradient">
+        <header class="bg-dark bg-gradient">
             <x-header />
-        </header> --}}
+        </header>
 
-        {{-- <nav class="navbar navbar-light bg-light">
+        <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
               <a class="navbar-brand" href={{route('user_register')}}>Cadastrar Ususario</a>
-              <form action={{route('user_find_by_name')}} class="d-flex">
+              <form action={{route('user_search')}} class="d-flex">
                 <input class="form-control me-2" type="search" name="busca" placeholder="Buscar" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Buscar</button>
               </form>
             </div>
-          </nav> --}}
+          </nav>
 
 
         <h1 class="h1 d-flex justify-content-center">Usuarios</h1>
