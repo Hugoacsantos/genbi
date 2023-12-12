@@ -37,11 +37,11 @@
             @csrf @method('PUT')
             <div class="mb-3">
                 <label for="" class="form-label">Titulo</label>
-                <input type="text" class="form-control" id="name" aria-describedby="emailHelp" value={{$book->title}}>
+                <input type="text" class="form-control" id="name" name="title" aria-describedby="emailHelp" value={{$book->title}}>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Autor</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value={{$book->author->name}}>
+                <input type="email" class="form-control" id="email" name="author" aria-describedby="emailHelp" value={{$book->author->name}}>
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
