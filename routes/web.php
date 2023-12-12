@@ -41,7 +41,7 @@ Route::prefix('book')->group(function(){
     Route::get('/cadastro',[BookController::class,'register'])->name('book_register');
     Route::get('/search',[BookController::class,'search'])->name('book_find_by_title');
     Route::get('/details/{id}',[BookController::class,'details'])->name('book_details');
-    Route::get('/edit/{id}',[BookController::class,'edit']);
+    Route::get('/edit/{id}',[BookController::class,'edit'])->name('book_edit');
     Route::get('/{id}',[BookController::class,'find']);
     Route::post('/create',[BookController::class,'create'])->name('book_create');
     Route::delete('/{id}',[BookController::class,'delete'])->name('book_delete');
@@ -63,7 +63,7 @@ Route::prefix('author')->group(function(){
     Route::get('/cadastro',[AuthorController::class,'register'])->name('author_register');
     Route::get('/search',[AuthorController::class,'search'])->name('author_find_by_name');
     Route::get('/details/{id}',[AuthorController::class,'details'])->name('author_details');
-    Route::get('/edit/{id}',[AuthorController::class,'edit']);
+    Route::get('/edit/{id}',[AuthorController::class,'edit'])->name('author_edit');
     Route::get('/{id}',[AuthorController::class,'find']);
     Route::post('/create',[AuthorController::class,'create'])->name('author_create');
     Route::delete('/{id}',[AuthorController::class,'delete'])->name('author_delete');
