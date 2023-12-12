@@ -44,7 +44,7 @@
                     <tr>
                         <td><a href="">{{$order->id}}</a></td>
                         <td><a href={{route('user_details',$order->user->id)}}>{{ $order->user->name }}</a></td>
-                        <td><a href={{route('book_details',$order->books->id)}}>{{ $order->books->title }}</a></td>
+                        <td><a href={{route('book_details',$order->book->id)}}>{{ $order->book->title }}</a></td>
                         <td><a  href={{route('order_close',$order->id)}}> @method('put') @csrf Devolvido</a></td>
                     </tr>
                 @endforeach

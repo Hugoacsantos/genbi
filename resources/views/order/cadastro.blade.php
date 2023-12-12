@@ -35,17 +35,18 @@
 
         <form action={{route('order_create')}} class="w-50 m-auto" method="POST">
             @csrf @method('POST')
+            <input type="text" hidden name="book_id" value={{$book->id}}></input>
             <div class="mb-3">
                 <label for="" class="form-label">Livro</label>
-                <input type="text" class="form-control" id="title" aria-describedby="emailHelp">
+                <input type="text" class="form-control" id="" name="" aria-describedby="emailHelp" value={{$book->title}} readonly>
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">Usuario</label>
-                <input type="text" class="form-control" id="description" aria-describedby="emailHelp">
+                <label for="" class="form-label">CPF do usuario</label>
+                <input type="text" class="form-control" id="" name="cpf" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Autor</label>
-                <input type="text" class="form-control" id="author">
+                <input type="text" class="form-control" id="" name="author_id" value={{$book->author->name}} readonly>
             </div>
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>

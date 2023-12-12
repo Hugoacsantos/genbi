@@ -49,11 +49,12 @@ Route::prefix('book')->group(function(){
 
 Route::prefix('order')->group(function(){
     Route::get('/',[OrderController::class,'index'])->name('order_home');
-    Route::get('/cadastro',[OrderController ::class,'register'])->name('order_register');
+    Route::get('/cadastro/{id}',[OrderController ::class,'register'])->name('order_register');
     Route::get('/search',[OrderController::class,'search'])->name('order_search');
     Route::get('/details/{id}',[OrderController::class,'details'])->name('order_details');
     Route::get('/edit/{id}',[OrderController::class,'edit']);
     Route::get('/{id}',[OrderController::class,'find']);
+    Route::post('/update',[OrderController::class,'update'])->name('order_close');
     Route::post('/create',[OrderController::class,'create'])->name('order_create');
     Route::delete('/{id}',[OrderController::class,'delete'])->name('order_delete');
 });

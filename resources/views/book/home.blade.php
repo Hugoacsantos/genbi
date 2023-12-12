@@ -36,6 +36,7 @@
                     <th scope="col">Author</th>
                     <th scope="col">Editar</th>
                     <th scope="col">Excluir</th>
+                    <th scope="col">Alugar</th>
                 </tr>
             </thead>
             <tbody>
@@ -45,6 +46,7 @@
                     <td><a href={{route('author_details',$book->author->id)}}>{{$book->author->name}}</a></td>
                     <td><a href={{route('book_edit',$book->id)}}>Editar</a></td>
                     <td><a href={{route('book_delete',$book->id)}}>Excluir</a></td>
+                    <td><a href={{route('order_register',$book->id)}}>Alugar</a></td>
                 </tr>
                 @endforeach
             </tbody>

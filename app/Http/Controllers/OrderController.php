@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Book;
 use App\Models\Order;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -50,8 +51,10 @@ class OrderController extends Controller
     }
 
     public function create(Request $request){
+        $user = User::where('cpf',$request->input('cpf'))->first();
+
         $order = Order::create([
-            'user_id' => $request->input('user_id'),
+            'user_id' => $user->id,
             'book_id' => $request->input('book_id'),
         ]);
 
