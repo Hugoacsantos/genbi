@@ -19,9 +19,9 @@
 
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href={{ route('book_register') }}>Cadastrar Emprestimo</a>
+                {{-- <a class="navbar-brand" href={{ route('order_register') }}>Cadastrar Emprestimo</a> --}}
                 <form action={{ route('book_find_by_title') }} class="d-flex">
-                    <input class="form-control me-2" type="search" name="busca" placeholder="Buscar"
+                    <input class="form-control me-2" type="search" name="busca" placeholder="Buscar por CPF"
                         aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>

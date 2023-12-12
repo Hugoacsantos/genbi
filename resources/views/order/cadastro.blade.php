@@ -33,14 +33,14 @@
             </ul>
         </header>
 
-        <form action={{route('book_create')}} class="w-50 m-auto" method="POST">
+        <form action={{route('order_create')}} class="w-50 m-auto" method="POST">
             @csrf @method('POST')
             <div class="mb-3">
-                <label for="" class="form-label">Titulo</label>
+                <label for="" class="form-label">Livro</label>
                 <input type="text" class="form-control" id="title" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">Descrição</label>
+                <label for="" class="form-label">Usuario</label>
                 <input type="text" class="form-control" id="description" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">

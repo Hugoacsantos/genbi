@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Book;
 use App\Models\Order;
 use Illuminate\Http\Request;
 
@@ -14,8 +15,11 @@ class OrderController extends Controller
         return view('order.home',['orders'=>$orders]);
     }
 
-    public function register(){
-        return view('order.cadastro');
+    public function register(string $id){
+        $book = Book::find($id);
+
+
+        return view('order.cadastro',['book'=>$book]);
     }
 
     public function details(string $id){
