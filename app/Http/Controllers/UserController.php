@@ -25,7 +25,7 @@ class UserController extends Controller
         return view('user.details',['user'=>$user]);
     }
 
-    public function edit(Request $request, string $id){
+    public function edit(string $id){
         $user = User::find($id);
 
         return view('user.editar',['user' => $user]);
@@ -44,10 +44,10 @@ class UserController extends Controller
     }
 
     public function update(Request $request,string $id){
-        $name = $request->input('name');
         $user = User::find($id);
 
-        $user->name = $name;
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
         $user->save();
 
         return redirect('/user');

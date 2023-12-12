@@ -17,15 +17,15 @@
             <x-header />
         </header>
 
-        <form action="" class="w-50 m-auto" method="POST">
+        <form action={{route('user_update',$user->id)}} class="w-50 m-auto" method="POST">
             @csrf @method('PUT')
             <div class="mb-3">
                 <label for="" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="name" aria-describedby="emailHelp" value={{$user->name}}>
+                <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp" value={{$user->name}}>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value={{$user->email}}>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" value={{$user->email}}>
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>

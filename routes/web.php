@@ -30,7 +30,7 @@ Route::prefix('user')->group(function(){
     Route::get('/search',[UserController::class,'search'])->name('user_search');
     Route::get('/details/{id}',[UserController::class,'details'])->name('user_details');
     Route::get('/edit/{id}',[UserController::class,'edit'])->name('user_edit');
-    Route::get('/{id}',[UserController::class,'find']);
+    Route::put('/{id}',[UserController::class,'update'])->name('user_update');
     Route::post('/create',[UserController::class,'create'])->name('user_create');
     Route::delete('/{id}',[UserController::class,'delete'])->name('user_delete');
 });
