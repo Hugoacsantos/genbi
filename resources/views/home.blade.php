@@ -31,7 +31,7 @@
                 @foreach ($orders as $order)
                 <tr>
                     <td>{{$order->user->name}}</td>
-                    <td>{{$order->books->title}}</td>
+                    <td>{{$order->book->title}}</td>
                     <td>{{date('d-m-Y',strtotime($order->created_at))}}</td>
                     <td>{{$order->id}}</td>
                 </tr>

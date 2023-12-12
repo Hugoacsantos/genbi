@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $orders = Order::orderBy('created_at','desc')->take(10);
+    $orders = Order::orderBy('created_at','desc')->take(10)->get();
     return view('home',['orders' => $orders]);
 })->name('home');
 
