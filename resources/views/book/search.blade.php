@@ -45,8 +45,8 @@
             <tbody>
                 @foreach ($books as $book)
                 <tr>
-                    <td>{{$book->title}}</td>
-                    <td>{{$book->author->name}}</td>
+                    <td><a href={{route('book_details',$book->id)}}>{{$book->title}}</a></td>
+                    <td><a href={{route('author_details',$book->author->id)}}>{{$book->author->name}}</a></td>
                     <td><a href={{route('book_edit',$book->id)}}>Editar</a></td>
                     <td><a href={{route('book_delete',$book->id)}}>Excluir</a></td>
                 </tr>

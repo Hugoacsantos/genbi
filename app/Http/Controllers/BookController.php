@@ -32,11 +32,14 @@ class BookController extends Controller
         return view('book.editar',['book' => $book]);
     }
 
-    public function search(Request $request, string $name){
+    public function search(Request $request){
         $title = $request->input('search');
-        $book = Book::where('title',$title)->first();
+        if(empty($title)){
+            return redirect('/book');
+        }
 
-        return view('book.search',['book' => $book]);
+        $books = Book::where('title',$title)->get();
+        return view('book.search',['books' => $books]);
     }
 
     public function update(Request $request,string $id){
