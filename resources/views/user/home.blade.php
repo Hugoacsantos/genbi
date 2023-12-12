@@ -21,7 +21,7 @@
             <div class="container-fluid">
               <a class="navbar-brand" href={{route('user_register')}}>Cadastrar Ususario</a>
               <form action={{route('user_search')}} class="d-flex">
-                <input class="form-control me-2" type="search" name="busca" placeholder="Buscar" aria-label="Search">
+                <input class="form-control me-2" type="search" name="busca" placeholder="Buscar por CPF" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Buscar</button>
               </form>
             </div>

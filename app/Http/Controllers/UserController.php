@@ -31,9 +31,14 @@ class UserController extends Controller
         return view('user.editar',['user' => $user]);
     }
 
-    public function search(Request $request, string $name){
-        $cpf = $request->input('search');
+    public function search(Request $request){
+        $cpf = $request->input('busca');
         $user = User::where('cpf',$cpf)->first();
+
+        if(empty($cpf)){
+            return redirect('/user');
+        }
+
 
         return view('user.search',['users' => $user]);
     }
