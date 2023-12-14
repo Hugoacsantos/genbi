@@ -22,7 +22,7 @@ class CreateAuthorRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|min:4',
         ];
     }
 }
