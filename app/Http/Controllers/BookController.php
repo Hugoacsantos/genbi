@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateBookRequest;
 use App\Models\Author;
 use App\Models\Book;
 use Illuminate\Http\Request;
@@ -52,7 +53,7 @@ class BookController extends Controller
         return redirect('/book');
     }
 
-    public function create(Request $request){
+    public function create(CreateBookRequest $request){
         $book = Book::create([
             'title' => $request->input('title'),
             'description' => $request->input('description'),

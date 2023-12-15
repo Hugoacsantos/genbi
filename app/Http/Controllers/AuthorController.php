@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateAuthorRequest;
 use App\Models\Author;
 use Illuminate\Http\Request;
 
@@ -45,7 +46,7 @@ class AuthorController extends Controller
         return redirect('/author');
     }
 
-    public function create(Request $request){
+    public function create(CreateAuthorRequest $request){
         $author = Author::create([
             'name' => $request->input('name'),
         ]);
