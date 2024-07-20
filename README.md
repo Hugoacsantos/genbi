@@ -3,7 +3,8 @@
 Projeto feito em mvc para o gerenciamento de livros.
 O projeto está em constante mudança conforme eu aprendo tecnologias e conceitos novos. 
 
-
+## Instalação
+Basta clonar o repositorio e rodar 1º `composer install` para instalar as dependencias do laravel 11 e depois rodar o `php artisan migrate` para rodar o schema do banco de dados (Recomendo no arquivo .env colocar em sqlite).
 
 ## Funcionalidades
 
@@ -17,10 +18,10 @@ O projeto está em constante mudança conforme eu aprendo tecnologias e conceito
 
 ## Tecnologias
 
-- ### [Laravel na versão 10](https://laravel.com/docs/10.x).
-- O laravel foi escolhido por facilitar a interação com o banco de dados com o ORM do [Eloquent](https://laravel.com/docs/10.x/eloquent), a facilidade de criar um sistema em mvc, e uma boa estrutura para fazer um sistema escalável como filas/jobs, sistema de injeção de dependência.
+- ### [Laravel na versão 11](https://laravel.com/docs/11.x).
+- O laravel foi escolhido por facilitar a interação com o banco de dados com o ORM do [Eloquent](https://laravel.com/docs/11.x/eloquent), a facilidade de criar um sistema em mvc, e uma boa estrutura para fazer um sistema escalável como filas/jobs, sistema de injeção de dependência.
 - ### [MariaDb](https://www.apachefriends.org/pt_br/index.html).
-- O mariadb foi escolhido como banco de dados relacional por vir com o xampp gratuitamente.
+- O mariadb foi escolhido como banco de dados relacional por vir com o xampp gratuitamente (Atualmente recomendo o sqlite que ja vem padrão com o laravel 11).
 
 
 ## Observações
