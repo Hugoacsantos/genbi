@@ -30,10 +30,10 @@
 
 
         <h1 class="h1 d-flex justify-content-center">Emprestimos Abertos</h1>
-        <table class="table table-dark table-striped w-50 m-auto text-center">
+        <table class="table table-dark table-striped w-auto m-auto text-center ">
             <thead>
-                <tr>
-                    <th scope="col">Id</th>
+                <tr class="text-center align-middle ">
+                    {{-- <th scope="col">Id</th> --}}
                     <th scope="col">Cliente</th>
                     <th scope="col">Livro</th>
                     <th scope="col">Concluido devolução</th>
@@ -42,10 +42,10 @@
             <tbody>
                 @foreach ($orders as $order)
                     <tr>
-                        <td><a href="">{{$order->id}}</a></td>
+                        {{-- <td><a href="">{{$order->id}}</a></td> --}}
                         <td><a href={{route('user_details',$order->user->id)}}>{{ $order->user->name }}</a></td>
                         <td><a href={{route('book_details',$order->book->id)}}>{{ $order->book->title }}</a></td>
-                        <td><a  href={{route('order_close',$order->id)}}> @method('put') @csrf Devolvido</a></td>
+                        <td><a  href={{route('order_close',$order->id)}}> @method('put') @csrf Devolver</a></td>
                     </tr>
                 @endforeach
             </tbody>

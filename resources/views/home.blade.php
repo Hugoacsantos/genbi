@@ -18,10 +18,10 @@
 
 
         <h1 class="pt-5 pb-5 text-center">Ultimas atualizações</h1>
-        <table class="table table-dark table-striped w-50 m-auto text-center ">
+        <table class="table table-dark table-striped w-auto m-auto text-center ">
             <thead>
                 <tr>
-                    <th scope="col">Nome</th>
+                    <th scope="col">Usuario</th>
                     <th scope="col">E-mail</th>
                     <th scope="col">Data</th>
                     {{-- <th scope="col">Id</th> --}}

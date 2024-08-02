@@ -29,7 +29,7 @@
 
 
         <h1 class="h1 d-flex justify-content-center">Livros</h1>
-        <table class="table table-dark table-striped w-50 m-auto text-center">
+        <table class="table table-dark table-striped w-auto m-auto text-center">
             <thead>
                 <tr>
                     <th scope="col">Titulo</th>
@@ -37,6 +37,7 @@
                     <th scope="col">Editar</th>
                     <th scope="col">Excluir</th>
                     <th scope="col">Alugar</th>
+                    <th scope="col">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -46,7 +47,18 @@
                     <td><a href={{route('author_details',$book->author->id)}}>{{$book->author->name}}</a></td>
                     <td><a href={{route('book_edit',$book->id)}}>Editar</a></td>
                     <td><a href={{route('book_delete',$book->id)}}>Excluir</a></td>
-                    <td><a href={{route('order_register',$book->id)}}>Alugar</a></td>
+                    <td>
+                        @if ($book->status == 'Alugado')
+                            <p>
+                                Alugado
+                            </p>
+                        @else
+                            <a href={{route('order_register',$book->id)}}>
+                                Alugar
+                            </a>
+                        @endif
+                    </td>
+                    <td>{{$book->status}}</td>
                 </tr>
                 @endforeach
             </tbody>

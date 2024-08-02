@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use function Laravel\Prompts\error;
+
 class Book extends Model
 {
     use HasFactory;
@@ -25,5 +27,18 @@ class Book extends Model
 
     public function author(){
         return $this->belongsTo(Author::class);
+    }
+
+    public function rent() {
+        if($this->status === 'Alugado'){
+            return error('Livro ja alugado');
+        }
+        $this->status = 'Alugado';
+        $this->save();
+    }
+
+    public function giveBack() {
+        $this->status = 'Disponivel';
+        $this->save();
     }
 }

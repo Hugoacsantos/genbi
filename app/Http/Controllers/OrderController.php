@@ -6,13 +6,18 @@ use App\Http\Controllers\Controller;
 use App\Models\Book;
 use App\Models\Order;
 use App\Models\User;
+use Error;
 use Illuminate\Http\Request;
+
+use function Laravel\Prompts\error;
 
 class OrderController extends Controller
 {
     public function index(){
-        $orders = Order::all();
-
+        $orders = Order::where('status','open')->get();
+        // dd($orders);
+        // $orders = new Order();
+        // $orders->active();
         return view('order.home',['orders'=>$orders]);
     }
 
@@ -45,13 +50,19 @@ class OrderController extends Controller
         $order = Order::find($id);
         $order->status = 'fechado';
         $order->save();
-
+        $book = Book::findOrFail($order->book_id);
+        $book->giveBack();
 
         return redirect('/order');
     }
 
     public function create(Request $request){
         $user = User::where('cpf',$request->input('cpf'))->first();
+        $book = Book::findOrFail($request->input('book_id'));
+        if($book->status == 'Alugado') {
+            return throw new Error('Ja alugado');
+        }
+        $book->rent();
 
         $order = Order::create([
             'user_id' => $user->id,

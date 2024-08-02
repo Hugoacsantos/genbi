@@ -14,6 +14,10 @@ class Order extends Model
         'book_id'
     ];
 
+    public function active() {
+        return $this->where('status','open')->get();
+    }
+
 
     public function user(){
         return $this->belongsTo(User::class);

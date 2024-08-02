@@ -54,7 +54,7 @@ Route::prefix('order')->group(function(){
     Route::get('/details/{id}',[OrderController::class,'details'])->name('order_details');
     Route::get('/edit/{id}',[OrderController::class,'edit']);
     Route::get('/{id}',[OrderController::class,'find']);
-    Route::post('/update',[OrderController::class,'update'])->name('order_close');
+    Route::get('/update/{id}',[OrderController::class,'update'])->name('order_close');
     Route::post('/create',[OrderController::class,'create'])->name('order_create');
     Route::delete('/{id}',[OrderController::class,'delete'])->name('order_delete');
 });
