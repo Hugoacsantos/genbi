@@ -24,7 +24,7 @@
                     <th scope="col">Nome</th>
                     <th scope="col">E-mail</th>
                     <th scope="col">Data</th>
-                    <th scope="col">Id</th>
+                    {{-- <th scope="col">Id</th> --}}
                 </tr>
             </thead>
             <tbody>
@@ -33,7 +33,7 @@
                     <td>{{$order->user->name}}</td>
                     <td>{{$order->book->title}}</td>
                     <td>{{date('d-m-Y',strtotime($order->created_at))}}</td>
-                    <td>{{$order->id}}</td>
+                    {{-- <td>{{$order->id}}</td> --}}
                 </tr>
                 @endforeach
             </tbody>
