@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateUserRequest;
 use App\Models\User;
+use App\Services\UserServices;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -55,13 +56,9 @@ class UserController extends Controller
     }
 
     public function create(CreateUserRequest $request){
-
-        $user = User::create([
-            'name' => $request->input('name'),
-            'email' => $request->input('email'),
-            'cpf' => $request->input('cpf')
-        ]);
-
+        // dd($request->toArray());
+        $UserServices = new UserServices();
+        $UserServices->create($request->toArray());
         return redirect('/user');
     }
 

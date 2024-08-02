@@ -32,7 +32,7 @@ Route::prefix('user')->group(function(){
     Route::get('/edit/{id}',[UserController::class,'edit'])->name('user_edit');
     Route::put('/{id}',[UserController::class,'update'])->name('user_update');
     Route::post('/create',[UserController::class,'create'])->name('user_create');
-    Route::delete('/{id}',[UserController::class,'delete'])->name('user_delete');
+    Route::get('/delete/{id}',[UserController::class,'delete'])->name('user_delete');
 });
 
 
