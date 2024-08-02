@@ -11,7 +11,7 @@ class CreateBookRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,7 @@ class CreateBookRequest extends FormRequest
         return [
             'title' => 'required|min:4',
             'description' => 'required|min:25',
-            'author_id' => 'required'
+            // 'author_id' => 'required'
         ];
     }
 }
