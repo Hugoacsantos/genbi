@@ -19,7 +19,7 @@
 
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href={{route('book_register')}}>Cadastrar Livro</a>
+              <a class="navbar-brand border border-success rounded p-1 m-0" href={{route('book_register')}}>Cadastrar Livro</a>
               <form action={{route('book_find_by_title')}} class="d-flex">
                 <input class="form-control me-2" type="search" name="search" placeholder="Buscar" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Buscar</button>

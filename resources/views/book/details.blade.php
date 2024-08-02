@@ -23,7 +23,9 @@
         <div>
             {{-- <h6 class="text-success">Total de {{ $user->orders->count() }} livros lidos</h6> --}}
 
-            <h4>Author: {{$book->author->name}}</h4>
+            <h4>Author:
+                <p class="text-primary">{{$book->author->name}}</p>
+            </h4>
 
             <div>
                 {{$book->description}}
