@@ -36,4 +36,11 @@ class UserServices
 
         return true;
     }
+
+    public function remove(string $id):true {
+        $user = User::find($id);
+        $user->delete();
+
+        return true;
+    }
 }
