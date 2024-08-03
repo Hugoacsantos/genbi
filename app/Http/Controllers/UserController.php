@@ -22,41 +22,34 @@ class UserController extends Controller
     }
 
     public function details(string $id){
-        $user = User::find($id);
-
+        $UserServices = new UserServices();
+        $user = $UserServices->findById($id);
         return view('user.details',['user'=>$user]);
     }
 
     public function edit(string $id){
-        $user = User::find($id);
+        $UserServices = new UserServices();
+        $user = $UserServices->findById($id);
 
         return view('user.editar',['user' => $user]);
     }
 
     public function search(Request $request){
         $cpf = $request->input('busca');
-        $user = User::where('cpf',$cpf)->first();
-
-        if(empty($cpf)){
-            return redirect('/user');
-        }
-
-
+        $UserServices = new UserServices();
+        $user = $UserServices->findByCpf($cpf);
         return view('user.search',['users' => $user]);
     }
 
     public function update(Request $request,string $id){
-        $user = User::find($id);
-
-        $user->name = $request->input('name');
-        $user->email = $request->input('email');
-        $user->save();
+        $data = $request->only(['name','email']);
+        $UserServices = new UserServices();
+        $UserServices->update(date:$data,id:$id);
 
         return redirect('/user');
     }
 
     public function create(CreateUserRequest $request){
-        // dd($request->toArray());
         $UserServices = new UserServices();
         $UserServices->create($request->toArray());
         return redirect('/user');
