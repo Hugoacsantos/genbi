@@ -28,6 +28,7 @@
           </nav>
 
 
+
         <h1 class="h1 d-flex justify-content-center">Usuarios</h1>
         <table class="table table-dark table-striped w-50 m-auto text-center">
             <thead>

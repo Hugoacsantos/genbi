@@ -33,6 +33,9 @@
             </ul>
         </header>
 
+        @if (!$users)
+            <h1 class="m-auto p-2">Não a usuario com o cpf informado</h1>
+        @else
         <h1 class="h1 d-flex justify-content-center">Usuarios</h1>
         <table class="table table-dark table-striped w-50 m-auto text-center">
             <thead>
@@ -54,7 +57,7 @@
                 @endforeach
             </tbody>
         </table>
-
+        @endif
     </div>
 
 </body>
