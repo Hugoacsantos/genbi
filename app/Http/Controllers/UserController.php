@@ -36,6 +36,7 @@ class UserController extends Controller
 
     public function search(Request $request){
         $cpf = $request->input('busca');
+        if(!$cpf) return redirect()->route('user_home');
         $UserServices = new UserServices();
         $user = $UserServices->findByCpf($cpf);
         return view('user.search',['users' => $user]);
